@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shop — Adaeze Atelier | Boutique Fashion, Awka</title>
+<meta name="description" content="Browse the full Adaeze Atelier collection — women's and men's ready-to-wear and accessories from our boutique in Awka, Anambra State.">
+<link rel="canonical" href="https://www.adaezeatelier.example/shop.html">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shop — Adaeze Atelier">
+<meta property="og:description" content="Considered ready-to-wear and accessories from a boutique atelier in Awka, Anambra State.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1509631179647-0177331693ae?w=1200&q=80&auto=format&fit=crop">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://images.unsplash.com">
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="logo">Adaeze <span>Atelier</span></a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="shop.html" aria-current="page">Shop</a></li>
+        <li><a href="shop.html">Collections</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-btn" type="button" id="focus-search" aria-label="Focus search field">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="20" y1="20" x2="16.5" y2="16.5"/></svg>
+      </button>
+      <button class="icon-btn" type="button" data-open-cart aria-label="Open cart">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h15l-1.5 9.5a2 2 0 0 1-2 1.7H8.7a2 2 0 0 1-2-1.7L5 4H2"/><circle cx="9.5" cy="21" r="1"/><circle cx="17.5" cy="21" r="1"/></svg>
+        <span class="badge" data-cart-count>0</span>
+      </button>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="journal.html">Journal</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="mobile-menu-footer">Awka, Anambra State, Nigeria</div>
+</nav>
+
+<div class="drawer-scrim" id="drawer-scrim" data-close-cart></div>
+<aside class="cart-drawer" id="cart-drawer" aria-hidden="true" aria-label="Shopping cart">
+  <div class="cart-header">
+    <h2>Your bag</h2>
+    <button type="button" class="icon-btn" data-close-cart aria-label="Close cart">✕</button>
+  </div>
+  <ul class="cart-items" id="cart-items"></ul>
+  <p class="cart-empty" id="cart-empty-msg">Your bag is empty — browse the shop to add pieces you love.</p>
+  <div class="cart-footer">
+    <div class="cart-subtotal"><span>Subtotal</span><span id="cart-subtotal-value">₦0</span></div>
+    <button type="button" class="btn btn-primary" id="cart-whatsapp-btn" disabled>Order via WhatsApp</button>
+    <button type="button" class="btn btn-outline" id="cart-clear-btn">Clear bag</button>
+    <p class="cart-note">Orders are confirmed by our team on WhatsApp — nothing is charged automatically.</p>
+  </div>
+</aside>
+
+<main id="main">
+  <section class="page-hero">
+    <div class="wrap">
+      <p class="hero-eyebrow">The full collection</p>
+      <h1>Shop Adaeze Atelier</h1>
+      <p>Filter by category, search by name, or sort by price — every piece is made in limited numbers, so availability shifts often.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <div class="shop-toolbar">
+        <div class="filter-row" role="group" aria-label="Filter by category">
+          <button type="button" class="chip" data-category="All" aria-pressed="true">All</button>
+          <button type="button" class="chip" data-category="Women's" aria-pressed="false">Women's</button>
+          <button type="button" class="chip" data-category="Men's" aria-pressed="false">Men's</button>
+          <button type="button" class="chip" data-category="Accessories" aria-pressed="false">Accessories</button>
+          <button type="button" class="chip" data-category="New Arrivals" aria-pressed="false">New Arrivals</button>
+        </div>
+        <div class="toolbar-controls">
+          <label class="search-field">
+            <span class="visually-hidden">Search products</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><line x1="20" y1="20" x2="16.5" y2="16.5"/></svg>
+            <input type="search" id="shop-search-input" placeholder="Search products…" autocomplete="off">
+          </label>
+          <label class="select-field">
+            <span class="visually-hidden">Sort by</span>
+            <select id="shop-sort-select">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="name-asc">Name: A–Z</option>
+            </select>
+          </label>
+          <span class="result-count" id="shop-result-count"></span>
+        </div>
+      </div>
+
+      <div class="product-grid" id="shop-product-grid"></div>
+      <div class="empty-state" id="shop-empty-state">
+        <p>No pieces match your search just yet. Try a different term or clear the filters.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">Adaeze <span>Atelier</span></a>
+      <p>A boutique atelier in Awka, Anambra State, making considered ready-to-wear and accessories for women and men.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="shop.html?category=New Arrivals">New Arrivals</a></li>
+        <li><a href="shop.html?category=Women's">Women's</a></li>
+        <li><a href="shop.html?category=Men's">Men's</a></li>
+        <li><a href="shop.html?category=Accessories">Accessories</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="journal.html">Journal</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="contact.html">Shipping</a></li>
+        <li><a href="contact.html">Returns</a></li>
+        <li><a href="contact.html">FAQ</a></li>
+        <li><a href="contact.html">Privacy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Connect</h4>
+      <ul>
+        <li><a href="https://instagram.com/adaezeatelier" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://wa.me/2340000000000" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="mailto:hello@adaezeatelier.example">Email</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year"></span> Adaeze Atelier, Awka, Anambra State. All rights reserved.</span>
+    <span>Placeholder contact details — replace before launch.</span>
+  </div>
+</footer>
+
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/search.js"></script>
+<script>
+  document.getElementById("focus-search")?.addEventListener("click", () => {
+    document.getElementById("shop-search-input")?.focus();
+  });
+</script>
+</body>
+</html>
